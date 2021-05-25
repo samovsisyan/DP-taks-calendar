@@ -1,0 +1,343 @@
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 52px;
+  font-size:24px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+.days li:hover {
+  padding: 4px;
+  background: #1abc9c;
+}
+
+
+
+
+
+//.open-button {
+//  background-color: #555;
+//  color: white;
+//  padding: 16px 20px;
+//  border: none;
+//  cursor: pointer;
+//  opacity: 0.8;
+//  position: fixed;
+//  bottom: 23px;
+//  right: 28px;
+//  width: 280px;
+//}
+
+/* The popup form - hidden by default */
+.form-popup {
+  //display: block;
+  //position: absolute;
+  //bottom: 0;
+  //right: 15px;
+  //border: 3px solid #f1f1f1;
+  //z-index: 9;
+  display: block;
+  position: absolute;
+  z-index: 9;
+  /* margin: auto 0; */
+  top: 133px;
+  bottom: 217px;
+  left: 30%;
+  right: 30%;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+//.form-container .btn:hover, .open-button:hover {
+//  opacity: 1;
+//}
+
+
+
+
+
+
+
+
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial;
+  font-size: 14px;
+}
+
+body > span,
+body > h1 {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+span {
+  color: #888888;
+}
+
+span > b {
+  color: black;
+}
+
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+calendar {
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: white;
+  width: 300px;
+  border: solid 1px #cccccc;
+  margin-bottom: 10px;
+}
+
+calendar > div.header {
+  float: left;
+  width: 100%;
+  background: #2875c7;
+  height: 40px;
+  color: white;
+}
+
+calendar > div.header > * {
+  height: 40px;
+  line-height: 40px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+calendar > div.header > i {
+  float: left;
+  width: 40px;
+  font-size: 1.125em;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+calendar > div.header > i.fa-angle-left {
+  text-align: left;
+}
+
+calendar > div.header > i.fa-angle-right {
+  text-align: right;
+  margin-left: -40px;
+}
+
+calendar > div.header > span {
+  float: left;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 50px;
+  margin-left: -40px;
+  text-align: center;
+  padding-right: 40px;
+  color: inherit;
+}
+
+calendar > div.week {
+  float: left;
+  width: 100%;
+  border-top: solid 1px #cccccc;
+}
+
+calendar > div.week:first-child {
+  border-top: none;
+}
+
+calendar > div.week > span.day {
+  float: left;
+  width: 14.28571429%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-left: solid 1px #cccccc;
+  font-size: 0.75em;
+  text-align: center;
+  height: 30px;
+  line-height: 30px !important;
+  display: inline-block;
+  vertical-align: middle;
+  background: white;
+  cursor: pointer;
+  color: black;
+}
+
+calendar > div.week > span.day:first-child {
+  border-left: none;
+}
+
+calendar > div.week > span.day.today {
+  background: #E3F2FF;
+}
+
+calendar > div.week > span.day.different-month {
+  color: #C0C0C0;
+}
+
+calendar > div.week > span.day.selected {
+  background: #2875c7;
+  color: white;
+}
+
+calendar > div.week.names > span {
+  color: #2875c7;
+  font-weight: bold;
+}
+
+
+
